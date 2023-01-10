@@ -42,9 +42,9 @@ public class Person {
         }
     }
     public void update(DataBaseConnector dbc) {
-        //String sql = "UPDATE person SET username = " + this.username, email = ?, password = ?, enabled = ? WHERE id = ?";
-        String sql = "UPDATE person SET email = '" + this.email + "' WHERE username = '" + this.username + "'";
-        int count = dbc.executeUpdate(sql);
+        String sql2 = "UPDATE person SET username = " + this.username + ",password = " + this.pass + ",email = " + this.email + "WHERE username = " + this.username;
+        //String sql = "UPDATE person SET email = '" + this.email + "' WHERE username = '" + this.username + "'";
+        int count = dbc.executeUpdate(sql2);
         System.out.println("Zmodyfikowano " + count + " rekordów.");
     }
     public void delete(DataBaseConnector dbc) {
