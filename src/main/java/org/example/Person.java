@@ -37,7 +37,6 @@ public class Person {
             String pass = rs.getString("password");
             boolean enabled = rs.getBoolean("enabled");
             Person p = new Person(id, username, email, pass, enabled);
-            // przetwarzanie obiektu Person
             System.out.println("id: " + id + ", username: " + username + ", email: " + email + ", pass: " + pass + ", enabled: " + enabled);
         }
     }
