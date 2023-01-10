@@ -30,30 +30,33 @@ public class DataBaseConnector {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Query added");
     }
 
-    public void executeSelect(String sql) throws SQLException {
-        Statement stmt = null;
+    // Read
+    public ResultSet executeSelect(String sql) {
         try {
-            stmt = this.connection.createStatement();
+            Statement stm = this.connection.createStatement();
+            return stm.executeQuery(sql);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        ResultSet rs = null;
+    }
+    // Update
+    public int executeUpdate(String sql) {
         try {
-            rs = stmt.executeQuery(sql);
+            Statement stm = this.connection.createStatement();
+            return stm.executeUpdate(sql);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        while (rs.next()) {
-            int id = rs.getInt("id");
-            String username = rs.getString("username");
-            String email = rs.getString("email");
-            System.out.println("ID = " + id);
-            System.out.println("NAME = " + username);
-            System.out.println("AGE = " + email);
-            System.out.println();
+    }
+    //Delete
+    public int executeDelete(String sql) {
+        try {
+            Statement stm = this.connection.createStatement();
+            return stm.executeUpdate(sql);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 }
