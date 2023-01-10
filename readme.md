@@ -1,5 +1,4 @@
-# :bulb: CRUD w Java 
-##by Wojciech Jackowiak ![WoJ](https://user-images.githubusercontent.com/43810008/211585809-402f9e33-faec-4a25-b871-773d0788f9d0.PNG)
+# :bulb: CRUD w Java by Wojciech Jackowiak ![WoJ](https://user-images.githubusercontent.com/43810008/211585809-402f9e33-faec-4a25-b871-773d0788f9d0.PNG)
 
 ### CRUD - Create Read Update Delte
 #### 1. Wstęp
